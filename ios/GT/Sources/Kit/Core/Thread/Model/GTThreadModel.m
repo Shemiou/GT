@@ -136,6 +136,34 @@ void updateCpuCurrentUsage(double cpuUsage) {
     if ([platform isEqualToString:@"iPhone9,2"]) return 2339.0;
 }
 
++ (void)saveDataToLocal:(NSString*)crashInfo
+{
+    // 获取到document下面的文件：
+    NSString *sysDirPath = [NSString stringWithFormat:@"%@/%@", [[GTConfig sharedInstance] usrDir], M_GT_SYS_DIR];
+    // 如果文件夹不存在，创建一个
+    if (![[NSFileManager defaultManager] fileExistsAtPath:sysDirPath])
+    {
+        [[NSFileManager defaultManager] createDirectoryAtPath:sysDirPath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat : @"yyyy年M月d日 H点m分ss秒"];
+    NSString* str = [formatter stringFromDate:[NSDate date]];
+    [formatter release];
+    
+    NSString* filePath =[str stringByAppendingFormat:@"%@", @".log"];
+    
+    FILE *file = fopen([[sysDirPath stringByAppendingPathComponent:filePath] UTF8String], "a+");
+    
+    if (file) {
+        fprintf(file, "%s", [crashInfo UTF8String]);
+        fflush(file);
+        fclose(file);
+    }
+    
+    NSLog(@"%@", crashInfo);
+}
+
 -(id) init
 {
     self = [super init];

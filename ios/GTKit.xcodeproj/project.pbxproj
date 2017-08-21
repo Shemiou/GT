@@ -135,20 +135,10 @@
 		91A9F291183870B4004B911E /* GTUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F16D183870B3004B911E /* GTUITextField.m */; };
 		91A9F295183870B4004B911E /* GTVerticalScrollBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A9F171183870B3004B911E /* GTVerticalScrollBar.h */; };
 		91A9F296183870B4004B911E /* GTVerticalScrollBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F172183870B3004B911E /* GTVerticalScrollBar.m */; };
-		91A9F2A2183870B5004B911E /* GTBatteryDetailBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A9F182183870B3004B911E /* GTBatteryDetailBoard.h */; };
-		91A9F2A3183870B5004B911E /* GTBatteryDetailBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F183183870B3004B911E /* GTBatteryDetailBoard.m */; };
-		91A9F2A4183870B5004B911E /* GTBattery.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A9F185183870B3004B911E /* GTBattery.h */; };
-		91A9F2A5183870B5004B911E /* GTBattery.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F186183870B3004B911E /* GTBattery.m */; };
 		91A9F2AC183870B5004B911E /* GTCoreModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A9F195183870B4004B911E /* GTCoreModel.h */; };
 		91A9F2AD183870B5004B911E /* GTCoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F196183870B4004B911E /* GTCoreModel.m */; };
 		91A9F2AE183870B5004B911E /* GTMemoryModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A9F19B183870B4004B911E /* GTMemoryModel.h */; };
 		91A9F2AF183870B5004B911E /* GTMemoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F19C183870B4004B911E /* GTMemoryModel.m */; };
-		91A9F2B0183870B5004B911E /* GTNetDetailBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A9F1A0183870B4004B911E /* GTNetDetailBoard.h */; };
-		91A9F2B1183870B5004B911E /* GTNetDetailBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F1A1183870B4004B911E /* GTNetDetailBoard.m */; };
-		91A9F2B2183870B5004B911E /* GTNetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A9F1A3183870B4004B911E /* GTNetModel.h */; };
-		91A9F2B3183870B5004B911E /* GTNetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F1A4183870B4004B911E /* GTNetModel.m */; };
-		91A9F2B4183870B5004B911E /* GTSMMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A9F1A9183870B4004B911E /* GTSMMonitor.h */; };
-		91A9F2B5183870B5004B911E /* GTSMMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F1AA183870B4004B911E /* GTSMMonitor.m */; };
 		91A9F2B6183870B5004B911E /* GTThreadModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A9F1AF183870B4004B911E /* GTThreadModel.h */; };
 		91A9F2B7183870B5004B911E /* GTThreadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F1B0183870B4004B911E /* GTThreadModel.m */; };
 		91A9F2BA183870B5004B911E /* GTLogBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A9F1BA183870B4004B911E /* GTLogBoard.h */; };
@@ -448,20 +438,10 @@
 		91A9F16D183870B3004B911E /* GTUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTUITextField.m; sourceTree = "<group>"; };
 		91A9F171183870B3004B911E /* GTVerticalScrollBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVerticalScrollBar.h; sourceTree = "<group>"; };
 		91A9F172183870B3004B911E /* GTVerticalScrollBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTVerticalScrollBar.m; sourceTree = "<group>"; };
-		91A9F182183870B3004B911E /* GTBatteryDetailBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBatteryDetailBoard.h; sourceTree = "<group>"; };
-		91A9F183183870B3004B911E /* GTBatteryDetailBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBatteryDetailBoard.m; sourceTree = "<group>"; };
-		91A9F185183870B3004B911E /* GTBattery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBattery.h; sourceTree = "<group>"; };
-		91A9F186183870B3004B911E /* GTBattery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBattery.m; sourceTree = "<group>"; };
 		91A9F195183870B4004B911E /* GTCoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCoreModel.h; sourceTree = "<group>"; };
 		91A9F196183870B4004B911E /* GTCoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCoreModel.m; sourceTree = "<group>"; };
 		91A9F19B183870B4004B911E /* GTMemoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMemoryModel.h; sourceTree = "<group>"; };
 		91A9F19C183870B4004B911E /* GTMemoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMemoryModel.m; sourceTree = "<group>"; };
-		91A9F1A0183870B4004B911E /* GTNetDetailBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNetDetailBoard.h; sourceTree = "<group>"; };
-		91A9F1A1183870B4004B911E /* GTNetDetailBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNetDetailBoard.m; sourceTree = "<group>"; };
-		91A9F1A3183870B4004B911E /* GTNetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNetModel.h; sourceTree = "<group>"; };
-		91A9F1A4183870B4004B911E /* GTNetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNetModel.m; sourceTree = "<group>"; };
-		91A9F1A9183870B4004B911E /* GTSMMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSMMonitor.h; sourceTree = "<group>"; };
-		91A9F1AA183870B4004B911E /* GTSMMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSMMonitor.m; sourceTree = "<group>"; };
 		91A9F1AF183870B4004B911E /* GTThreadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTThreadModel.h; sourceTree = "<group>"; };
 		91A9F1B0183870B4004B911E /* GTThreadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTThreadModel.m; sourceTree = "<group>"; };
 		91A9F1BA183870B4004B911E /* GTLogBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLogBoard.h; sourceTree = "<group>"; };
@@ -987,41 +967,11 @@
 		91A9F17F183870B3004B911E /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				91A9F180183870B3004B911E /* Battery */,
 				91A9F18E183870B4004B911E /* Common */,
 				91A9F198183870B4004B911E /* Memory */,
-				91A9F19E183870B4004B911E /* Net */,
-				91A9F1A6183870B4004B911E /* SM */,
 				91A9F1AC183870B4004B911E /* Thread */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		91A9F180183870B3004B911E /* Battery */ = {
-			isa = PBXGroup;
-			children = (
-				91A9F181183870B3004B911E /* Controller */,
-				91A9F184183870B3004B911E /* Model */,
-			);
-			path = Battery;
-			sourceTree = "<group>";
-		};
-		91A9F181183870B3004B911E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				91A9F182183870B3004B911E /* GTBatteryDetailBoard.h */,
-				91A9F183183870B3004B911E /* GTBatteryDetailBoard.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		91A9F184183870B3004B911E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				91A9F185183870B3004B911E /* GTBattery.h */,
-				91A9F186183870B3004B911E /* GTBattery.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		91A9F18E183870B4004B911E /* Common */ = {
@@ -1054,50 +1004,6 @@
 			children = (
 				91A9F19B183870B4004B911E /* GTMemoryModel.h */,
 				91A9F19C183870B4004B911E /* GTMemoryModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		91A9F19E183870B4004B911E /* Net */ = {
-			isa = PBXGroup;
-			children = (
-				91A9F19F183870B4004B911E /* Controller */,
-				91A9F1A2183870B4004B911E /* Model */,
-			);
-			path = Net;
-			sourceTree = "<group>";
-		};
-		91A9F19F183870B4004B911E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				91A9F1A0183870B4004B911E /* GTNetDetailBoard.h */,
-				91A9F1A1183870B4004B911E /* GTNetDetailBoard.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		91A9F1A2183870B4004B911E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				91A9F1A3183870B4004B911E /* GTNetModel.h */,
-				91A9F1A4183870B4004B911E /* GTNetModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		91A9F1A6183870B4004B911E /* SM */ = {
-			isa = PBXGroup;
-			children = (
-				91A9F1A8183870B4004B911E /* Model */,
-			);
-			path = SM;
-			sourceTree = "<group>";
-		};
-		91A9F1A8183870B4004B911E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				91A9F1A9183870B4004B911E /* GTSMMonitor.h */,
-				91A9F1AA183870B4004B911E /* GTSMMonitor.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1554,7 +1460,6 @@
 				91A9F2DF183870B5004B911E /* GTParaOutDetailBoard.h in Headers */,
 				91A9F2BA183870B5004B911E /* GTLogBoard.h in Headers */,
 				91A9F3E418387D6B004B911E /* GTRotateBoard.h in Headers */,
-				91A9F2A4183870B5004B911E /* GTBattery.h in Headers */,
 				91A9F2C3183870B5004B911E /* GTLogBuffer.h in Headers */,
 				F87417511B86CF6100CEBBA0 /* GTList.h in Headers */,
 				91A9F308183870B5004B911E /* GTParaSettingBoard.h in Headers */,
@@ -1564,7 +1469,6 @@
 				91A9F2F0183870B5004B911E /* GTPluginList.h in Headers */,
 				91A9F300183870B5004B911E /* GTSettingCell.h in Headers */,
 				B09A44FA1F4A7E5F007A3E5E /* CPUFrequencyMetric.h in Headers */,
-				91A9F2B4183870B5004B911E /* GTSMMonitor.h in Headers */,
 				91A9F290183870B4004B911E /* GTUITextField.h in Headers */,
 				91A9F2F6183870B5004B911E /* GTProfiler.h in Headers */,
 				9111179A18556B2A007D0AC0 /* GTOutputDataInfo.h in Headers */,
@@ -1573,7 +1477,6 @@
 				91A9F302183870B5004B911E /* GTSettingRow.h in Headers */,
 				91A9F4261838A436004B911E /* GTParaBar.h in Headers */,
 				91A8372A183CEA3A00F8A779 /* GTSingleDetailBoard.h in Headers */,
-				91A9F2B2183870B5004B911E /* GTNetModel.h in Headers */,
 				F87417551B86CF7F00CEBBA0 /* GTImage.h in Headers */,
 				91A9F28E183870B4004B911E /* GTUITableView.h in Headers */,
 				91A9F2C1183870B5004B911E /* GTLog.h in Headers */,
@@ -1584,7 +1487,6 @@
 				91A9F2CC183870B5004B911E /* GTDebugConsole.h in Headers */,
 				91A9F2E1183870B5004B911E /* GTParaOutputBoard.h in Headers */,
 				91C97F121839FDBA0059BBE6 /* GTCrashPlugin.h in Headers */,
-				91A9F2B0183870B5004B911E /* GTNetDetailBoard.h in Headers */,
 				91A9F2D4183870B5004B911E /* GTUIManager.h in Headers */,
 				91A9F2D8183870B5004B911E /* GTParaConfig.h in Headers */,
 				91A9F2E3183870B5004B911E /* GTInputList.h in Headers */,
@@ -1616,7 +1518,6 @@
 				F874174C1B86CEC500CEBBA0 /* GTMTAConfig.h in Headers */,
 				91A9F2F8183870B5004B911E /* GTProfilerValue.h in Headers */,
 				91A9F2F2183870B5004B911E /* GTProfilerBoard.h in Headers */,
-				91A9F2A2183870B5004B911E /* GTBatteryDetailBoard.h in Headers */,
 				91A9F27E183870B4004B911E /* GTPlotsView.h in Headers */,
 				91A9F41E1838A0B1004B911E /* GTLogFilterView.h in Headers */,
 			);
@@ -1807,8 +1708,6 @@
 				91A9F3EC18387E12004B911E /* GTTabBarController.m in Sources */,
 				91A9F2C9183870B5004B911E /* GTNSLog.m in Sources */,
 				91A9F41B1838A08A004B911E /* GTLogCell.m in Sources */,
-				91A9F2B5183870B5004B911E /* GTSMMonitor.m in Sources */,
-				91A9F2A3183870B5004B911E /* GTBatteryDetailBoard.m in Sources */,
 				91A9F2F9183870B5004B911E /* GTProfilerValue.m in Sources */,
 				91A9F2FD183870B5004B911E /* GTACSettingBoard.m in Sources */,
 				91A9F2C6183870B5004B911E /* GTLogConfig.m in Sources */,
@@ -1831,7 +1730,6 @@
 				91D1395B183EF7C300062C6E /* GTOutputValue.m in Sources */,
 				91A9F2F1183870B5004B911E /* GTPluginList.m in Sources */,
 				91C38AD11840A9BE00309C2A /* GTParaOutPlotsBoard.m in Sources */,
-				91A9F2A5183870B5004B911E /* GTBattery.m in Sources */,
 				918B775A185EA8940054FA1A /* GTMutableCString.m in Sources */,
 				91A9F28D183870B4004B911E /* GTUISwitch.m in Sources */,
 				91A8372B183CEA3A00F8A779 /* GTSingleDetailBoard.m in Sources */,
@@ -1847,7 +1745,6 @@
 				91A9F2E6183870B5004B911E /* GTInputObject.m in Sources */,
 				91A9F2AD183870B5004B911E /* GTCoreModel.m in Sources */,
 				91A9F40318387E6A004B911E /* GTPopoverTouchView.m in Sources */,
-				91A9F2B3183870B5004B911E /* GTNetModel.m in Sources */,
 				91111739185567C4007D0AC0 /* GTInputDataInfo.m in Sources */,
 				91A9F2C2183870B5004B911E /* GTLog.m in Sources */,
 				91A9F28F183870B4004B911E /* GTUITableView.m in Sources */,
@@ -1870,7 +1767,6 @@
 				91A9F2D9183870B5004B911E /* GTParaConfig.m in Sources */,
 				91A9F2D5183870B5004B911E /* GTUIManager.m in Sources */,
 				91A9F2B7183870B5004B911E /* GTThreadModel.m in Sources */,
-				91A9F2B1183870B5004B911E /* GTNetDetailBoard.m in Sources */,
 				91A9F303183870B5004B911E /* GTSettingRow.m in Sources */,
 				91C97F151839FDBA0059BBE6 /* GTNSLogBoard.m in Sources */,
 				9111179F18556D3A007D0AC0 /* GTDataInfo.m in Sources */,

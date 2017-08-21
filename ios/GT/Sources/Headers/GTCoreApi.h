@@ -118,20 +118,6 @@ extern int64_t func_getFreeMemory();
 
 
 /**
- * @brief   清除网络数据
- * @ingroup GT工具能力使用说明
- * @return
-*
- * Example Usage:
- * @code
- *    GT_UTIL_RESET_NET_DATA;
- * @endcode
- */
-#define GT_UTIL_RESET_NET_DATA func_resetNetData()
-extern void func_resetNetData();
-
-
-/**
  * @brief   获取当前电量信息
  * @ingroup GT工具能力使用说明
  *

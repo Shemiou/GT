@@ -32,12 +32,9 @@
 #import "GTUIManager.h"
 #import "GTConfig.h"
 #import "GTMemoryModel.h"
-#import "GTNetModel.h"
 #import "GTThreadModel.h"
 #import "GTCrashFileHandler.h"
 #import "GTNSLog.h"
-#import "GTSMMonitor.h"
-#import "GTBattery.h"
 #import "GTLang.h"
 #import "GTLangDef.h"
 #import "GTVersionDef.h"
@@ -78,11 +75,8 @@ M_GT_DEF_SINGLETION(GTDebugConsole);
 
     
     // 监控初始化
-    [GTSMMonitor sharedInstance];
     [GTThreadModel sharedInstance];
-    [GTNetModel sharedInstance];
     [GTMemoryModel sharedInstance];
-    [GTBattery sharedInstance];
     
     
     // 日志初始化

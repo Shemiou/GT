@@ -10,7 +10,6 @@
 
 #import "GTMemoryModel.h"
 #import "GTThreadModel.h"
-#import "GTNetModel.h"
 #import "GTUtility.h"
 #import "GTOutputList.h"
 

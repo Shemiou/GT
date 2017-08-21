@@ -285,6 +285,8 @@
 		91F5CBFF19B7FED500883B21 /* GTLang.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F5CBFC19B7FED500883B21 /* GTLang.m */; };
 		91F5CC0019B7FED500883B21 /* GTLangDef.h in Headers */ = {isa = PBXBuildFile; fileRef = 91F5CBFD19B7FED500883B21 /* GTLangDef.h */; };
 		91F60D4718F68DA700FB35CA /* EULA.html in Resources */ = {isa = PBXBuildFile; fileRef = 91F60D4618F68DA700FB35CA /* EULA.html */; };
+		B09A44FA1F4A7E5F007A3E5E /* CPUFrequencyMetric.h in Headers */ = {isa = PBXBuildFile; fileRef = B09A44F81F4A7E5F007A3E5E /* CPUFrequencyMetric.h */; };
+		B09A44FB1F4A7E5F007A3E5E /* libCPUFreqMetric.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B09A44F91F4A7E5F007A3E5E /* libCPUFreqMetric.a */; };
 		E942854A1C993B5C003B9967 /* UIScreen+Bounds.h in Headers */ = {isa = PBXBuildFile; fileRef = E94285481C993B5C003B9967 /* UIScreen+Bounds.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E942854B1C993B5C003B9967 /* UIScreen+Bounds.m in Sources */ = {isa = PBXBuildFile; fileRef = E94285491C993B5C003B9967 /* UIScreen+Bounds.m */; };
 		F874174A1B86CEC500CEBBA0 /* libmtasdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F87417471B86CEC500CEBBA0 /* libmtasdk.a */; };
@@ -597,6 +599,8 @@
 		91F5CBFD19B7FED500883B21 /* GTLangDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLangDef.h; sourceTree = "<group>"; };
 		91F5CC0119B7FF3F00883B21 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/GTStrings.strings"; sourceTree = "<group>"; };
 		91F60D4618F68DA700FB35CA /* EULA.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EULA.html; sourceTree = "<group>"; };
+		B09A44F81F4A7E5F007A3E5E /* CPUFrequencyMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUFrequencyMetric.h; sourceTree = "<group>"; };
+		B09A44F91F4A7E5F007A3E5E /* libCPUFreqMetric.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCPUFreqMetric.a; sourceTree = "<group>"; };
 		E94285481C993B5C003B9967 /* UIScreen+Bounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Bounds.h"; sourceTree = "<group>"; };
 		E94285491C993B5C003B9967 /* UIScreen+Bounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Bounds.m"; sourceTree = "<group>"; };
 		F874171F1B86C89900CEBBA0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -618,6 +622,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B09A44FB1F4A7E5F007A3E5E /* libCPUFreqMetric.a in Frameworks */,
 				F874174A1B86CEC500CEBBA0 /* libmtasdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1427,6 +1432,8 @@
 		91A9F40418387FD1004B911E /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				B09A44F81F4A7E5F007A3E5E /* CPUFrequencyMetric.h */,
+				B09A44F91F4A7E5F007A3E5E /* libCPUFreqMetric.a */,
 				F87417471B86CEC500CEBBA0 /* libmtasdk.a */,
 				F87417481B86CEC500CEBBA0 /* GTMTA.h */,
 				F87417491B86CEC500CEBBA0 /* GTMTAConfig.h */,
@@ -1556,6 +1563,7 @@
 				91A9F2F4183870B5004B911E /* GTProfilerDetailBoard.h in Headers */,
 				91A9F2F0183870B5004B911E /* GTPluginList.h in Headers */,
 				91A9F300183870B5004B911E /* GTSettingCell.h in Headers */,
+				B09A44FA1F4A7E5F007A3E5E /* CPUFrequencyMetric.h in Headers */,
 				91A9F2B4183870B5004B911E /* GTSMMonitor.h in Headers */,
 				91A9F290183870B4004B911E /* GTUITextField.h in Headers */,
 				91A9F2F6183870B5004B911E /* GTProfiler.h in Headers */,
@@ -1945,6 +1953,7 @@
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -1985,6 +1994,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -2050,6 +2060,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2072,7 +2083,7 @@
 				PRODUCT_NAME = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s arm64 i386 x86_64";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -2086,6 +2097,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -2101,7 +2113,7 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s arm64 i386 x86_64";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};

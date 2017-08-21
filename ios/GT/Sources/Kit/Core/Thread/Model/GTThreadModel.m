@@ -33,6 +33,7 @@
 #import "GTThreadModel.h"
 #import "GT.h"
 #import "GTOutputList.h"
+#import "GTLog.h"
 
 #include <mach/mach.h>
 #include <malloc/malloc.h>
@@ -44,10 +45,96 @@
 #import <mach/processor_info.h>
 #import <mach/mach_host.h>
 
+#import <sys/utsname.h>
+#include <stdint.h>
+#include <inttypes.h>
+#include "CPUFrequencyMetric.h"
+#import "GTConfig.h"
 
 @implementation GTThreadModel
 
+static id object;
+
+static int64_t currentCpuFrequency = 0LL;
+
 M_GT_DEF_SINGLETION(GTThreadModel);
+
+int64_t getCurrentCpuFrequency() {
+    return currentCpuFrequency;
+}
+
+void updateCpuCurrentUsage(double cpuUsage) {
+    //最高主频
+    float maxFreq = [object getMaxFrequencyWithPhoneModel];
+    //更新次数
+    static uint32_t updateIndex = 0;
+    static uint32_t zeroCpuUsageCount = 0;
+    static double cpuUsageRecord[3] = {0.0};
+    static int cpuUsageRecordCount = sizeof(cpuUsageRecord) / sizeof(cpuUsageRecord[0]);
+    cpuUsageRecord[++updateIndex % cpuUsageRecordCount] = cpuUsage;
+    zeroCpuUsageCount = cpuUsage <= 0.000001 && cpuUsage >= -0.000001 ? zeroCpuUsageCount + 1 : 0;
+    do {
+        if (zeroCpuUsageCount > 3) {
+            break;
+        }
+        static uint32_t freqChangePercentMonitorCount = 3;
+        static uint32_t highEnergyConsumptionMonitorCount = 0;
+        static uint32_t normalEnergyConsumptionMonitorCount = 0;
+        freqChangePercentMonitorCount -= freqChangePercentMonitorCount > 0 ? 1 : 0;
+        //当前主频
+        highEnergyConsumptionMonitorCount += currentCpuFrequency / maxFreq > 0.45 ? 1 : 0;
+        ++normalEnergyConsumptionMonitorCount;
+        if ((freqChangePercentMonitorCount <= 0)
+            && (highEnergyConsumptionMonitorCount < 3)
+            && (normalEnergyConsumptionMonitorCount < 10)) {
+            double sumCpuUsage = 0.0;
+            for (int i=0; i<cpuUsageRecordCount; ++i) {
+                sumCpuUsage += cpuUsageRecord[i];
+            }
+            double avgCpuUsage = sumCpuUsage / cpuUsageRecordCount;
+            cpuUsage = cpuUsage <= 0.000001 && cpuUsage >= -0.000001 ? 0.001 : cpuUsage;
+            avgCpuUsage = avgCpuUsage <= 0.000001 && avgCpuUsage >= -0.000001 ? 0.001 : avgCpuUsage;
+            double ratio = cpuUsage <= avgCpuUsage ? cpuUsage / avgCpuUsage : avgCpuUsage / cpuUsage;
+            if (ratio > 0.80 && (cpuUsage - cpuUsageRecord[(updateIndex - 1) % cpuUsageRecordCount]) < 8.0 && (cpuUsage - cpuUsageRecord[(updateIndex - 1) % cpuUsageRecordCount]) > -8.0) {
+                break;
+            }
+        }
+        highEnergyConsumptionMonitorCount = 0;
+        normalEnergyConsumptionMonitorCount = 0;
+        int64_t cpuFrequencyValue = CurrentCpuFrequency() / 1000000;
+        if (llabs(currentCpuFrequency - cpuFrequencyValue) / maxFreq > 0.17857) {
+            freqChangePercentMonitorCount = 3;
+        }
+        currentCpuFrequency = cpuFrequencyValue;
+        
+    } while (false);
+}
+
+- (float)getMaxFrequencyWithPhoneModel{
+    struct utsname systemInfo;
+    
+    uname(&systemInfo);
+    
+    NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
+    
+    //iPhone 6 Plus
+    if ([platform isEqualToString:@"iPhone7,1"]) return 1400.0;
+    
+    //iPhone 6
+    if ([platform isEqualToString:@"iPhone7,2"]) return 1400.0;
+    
+    //iPhone 6s Plus
+    if ([platform isEqualToString:@"iPhone8,2"]) return 1848.0;
+    
+    //iPhone 6s
+    if ([platform isEqualToString:@"iPhone8,1"]) return 1848.0;
+    
+    //iPhone 7
+    if ([platform isEqualToString:@"iPhone9,1"]) return 2339.0;
+    
+    //iPhone 7 Plus
+    if ([platform isEqualToString:@"iPhone9,2"]) return 2339.0;
+}
 
 -(id) init
 {
@@ -107,6 +194,14 @@ M_GT_DEF_SINGLETION(GTThreadModel);
     cpu_usage = cpu_usage / (float)TH_USAGE_SCALE * 100.0;
     
     vm_deallocate(mach_task_self(), (vm_offset_t)thread_list, thread_count * sizeof(thread_t));
+    
+    updateCpuCurrentUsage(cpu_usage);
+    
+    float maxFreq = [self getMaxFrequencyWithPhoneModel];
+    
+    cpu_usage = getCurrentCpuFrequency() * cpu_usage / maxFreq;
+    
+    //    [[GTLog sharedInstance] addLog:[NSString stringWithFormat:@"CPU运算后占用：%f || 当前机型最高主频：%f",cpu_usage,maxFreq] tag:@"INFO" forLevel:GT_LOG_INFO];
     
     return cpu_usage;
 }
